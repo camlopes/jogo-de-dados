@@ -18,6 +18,7 @@ public class Main {
 
             for(int i = 0; i < quantidadeDados; i++){
                 faceDoDado = random.nextInt(1, 7);
+                mostrarDado(faceDoDado);
                 total += faceDoDado;
 
                 System.out.println("Voce jogou: " + faceDoDado);
@@ -27,5 +28,60 @@ public class Main {
         }
 
         scanner.close();
+    }
+
+    static void mostrarDado(int faceDoDado){
+        String dado1 = """
+                 -------
+                |       |
+                |   ●   |
+                |       |
+                 -------
+                """;
+        String dado2 = """
+                 -------
+                | ●     |
+                |       |
+                |     ● |
+                 -------
+                """;
+        String dado3 = """
+                 -------
+                | ●     |
+                |   ●   |
+                |     ● |
+                 -------
+                """;
+        String dado4 = """
+                 -------
+                | ●   ● |
+                |       |
+                | ●   ● |
+                 -------
+                """;
+        String dado5 = """
+                 -------
+                | ●   ● |
+                |   ●   |
+                | ●   ● |
+                 -------
+                """;
+        String dado6 = """
+                 -------
+                | ●   ● |
+                | ●   ● |
+                | ●   ● |
+                 -------
+                """;
+
+        switch(faceDoDado){
+            case 1 -> System.out.print(dado1);
+            case 2 -> System.out.print(dado2);
+            case 3 -> System.out.print(dado3);
+            case 4 -> System.out.print(dado4);
+            case 5 -> System.out.print(dado5);
+            case 6 -> System.out.print(dado6);
+            default -> System.out.print("Jogada invalida");
+        }
     }
 }
